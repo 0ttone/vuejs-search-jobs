@@ -2,9 +2,9 @@ Vue.config.devtools = true;
 
 
 
-const app = new Vue(
+     const app = new Vue(
       {
-          el: '#app',
+          el: "#app",
 
           data: {
 
@@ -135,7 +135,7 @@ const app = new Vue(
                   starred: [ 1, 2, 3],
                   appllied: [ 4, 5]
 
-                  
+
                   
                   
                   
@@ -143,30 +143,38 @@ const app = new Vue(
                 
             methods : {
 
+                  //logo dinamico - funzione
+                  pathLogo: function (avg) {
+                        return "./img/"+ adv.logo +".jpg";
+                  },
 
-            }
+
+                  //funzione per push
+
+
+
+            },
            
       
             
       
       
-      
-      
-      
-      
-      
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
       })
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+

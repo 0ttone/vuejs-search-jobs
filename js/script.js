@@ -60,7 +60,7 @@ Vue.config.devtools = true;
 
                         {
                               id: 5,
-                              company: 'Perferendis',
+                              company: 'Cows and Pigs',
                               position: 'Butcher',
                               description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure veniam similique adipisci! Perferendis odio sapiente libero quam deleniti quidem consequuntur adipisci minima non iusto, sunt optio hic. Corporis, laboriosam perferendis?',
                               created_at: '5/22/2021',
@@ -94,41 +94,7 @@ Vue.config.devtools = true;
 
                         },
 
-                        {
-                              id: 8,
-                              company: 'Yellow Duck',
-                              position: 'Sound Designer',
-                              description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure veniam similique adipisci! Perferendis odio sapiente libero quam deleniti quidem consequuntur adipisci minima non iusto, sunt optio hic. Corporis, laboriosam perferendis?',
-                              created_at: '5/22/2021',
-                              logo: 'logo.jpg',
-                              city: 'Roma',
-                              contract: 'Full Time'
-
-                        },
-
-                        {
-                              id: 9,
-                              company: 'Supima',
-                              position: 'Graphic Designer',
-                              description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure veniam similique adipisci! Perferendis odio sapiente libero quam deleniti quidem consequuntur adipisci minima non iusto, sunt optio hic. Corporis, laboriosam perferendis?',
-                              created_at: '5/22/2021',
-                              logo: 'logo.jpg',
-                              city: 'Roma',
-                              contract: 'Full Time'
-
-                        },
-
-                        {
-                              id: 0,
-                              company: 'Perferendis',
-                              position: 'Senior Developer',
-                              description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure veniam similique adipisci! Perferendis odio sapiente libero quam deleniti quidem consequuntur adipisci minima non iusto, sunt optio hic. Corporis, laboriosam perferendis?',
-                              created_at: '5/22/2021',
-                              logo: 'logo.jpg',
-                              city: 'Roma',
-                              contract: 'Full Time'
-
-                        },
+                        
 
                   ],
 
@@ -148,22 +114,25 @@ Vue.config.devtools = true;
                         return "./img/"+ adv.logo ;
                   },
 
+                  //funzione per push a starred
+                  addToStarred: function (index){
+                        this.starred.push(index + 1)
+                        console.log(this.starred)
+                  },
+
+
+
                   //funzione assegnazione star
-                  advInStarred: function(index){
-                        if(this.starred.includes(index + 1)){
-                        return 'fas fa-star'
+                  advInStarred: function (index){
+                        if (this.starred.includes(index + 1)){
+                        return "fas fa-star";
                   } else {
-                        return 'far fa-heart'
+                        return "far fa-star";
                   }
                    },
 
 
-                  //funzione per push a starred
-                  addToStarred: function (index){
-                        this.starred.push(index+1)
-                        console.log(this.starred)
-                  }
-
+                  
 
 
             },

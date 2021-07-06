@@ -21,7 +21,7 @@
       <div id="app">
             
             <div class="jobs-container">
-                  <ul v-for="(adv, index)in jobs" class="adv-job">
+                  <ul v-for="(adv, index) in jobs" class="adv-job">
                         <li>ID Adv: {{adv.id}}</li>
                         <li>Company: {{adv.company}}</li>
                         <li>Position: {{adv.position}}</li>
@@ -30,7 +30,7 @@
                         <li>City: {{adv.city}}</li>
                         <li>Contract: {{adv.contract}}</li>
                         <li><img class="logo" :src="adv.logo" alt="logo"></li>
-                        <li class="star"><i @click</li>
+                        <li class="star"><i @click="addToStarred(index)" :class="advInStarred(index)"></li>
                         
 
                   </ul>

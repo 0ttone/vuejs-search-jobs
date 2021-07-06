@@ -25,7 +25,7 @@ Vue.config.devtools = true;
                         {
                               id: 2,
                               company: 'Perferendis',
-                              position: 'Developer',
+                              position: 'Analyst',
                               description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure veniam similique adipisci! Perferendis odio sapiente libero quam deleniti quidem consequuntur adipisci minima non iusto, sunt optio hic. Corporis, laboriosam perferendis?',
                               created_at: '5/22/2021',
                               logo: 'logo.jpg',
@@ -49,7 +49,7 @@ Vue.config.devtools = true;
                         {
                               id: 4,
                               company: 'Perferendis',
-                              position: 'Developer',
+                              position: 'Software Designer',
                               description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure veniam similique adipisci! Perferendis odio sapiente libero quam deleniti quidem consequuntur adipisci minima non iusto, sunt optio hic. Corporis, laboriosam perferendis?',
                               created_at: '5/22/2021',
                               logo: 'logo.jpg',
@@ -61,7 +61,7 @@ Vue.config.devtools = true;
                         {
                               id: 5,
                               company: 'Perferendis',
-                              position: 'Developer',
+                              position: 'Butcher',
                               description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure veniam similique adipisci! Perferendis odio sapiente libero quam deleniti quidem consequuntur adipisci minima non iusto, sunt optio hic. Corporis, laboriosam perferendis?',
                               created_at: '5/22/2021',
                               logo: 'logo.jpg',
@@ -73,7 +73,7 @@ Vue.config.devtools = true;
                         {
                               id: 6,
                               company: 'Perferendis',
-                              position: 'Developer',
+                              position: 'Web Designer',
                               description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure veniam similique adipisci! Perferendis odio sapiente libero quam deleniti quidem consequuntur adipisci minima non iusto, sunt optio hic. Corporis, laboriosam perferendis?',
                               created_at: '5/22/2021',
                               logo: 'logo.jpg',
@@ -84,8 +84,8 @@ Vue.config.devtools = true;
 
                         {
                               id: 7,
-                              company: 'Perferendis',
-                              position: 'Developer',
+                              company: 'Profundis',
+                              position: 'Miner',
                               description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure veniam similique adipisci! Perferendis odio sapiente libero quam deleniti quidem consequuntur adipisci minima non iusto, sunt optio hic. Corporis, laboriosam perferendis?',
                               created_at: '5/22/2021',
                               logo: 'logo.jpg',
@@ -96,8 +96,8 @@ Vue.config.devtools = true;
 
                         {
                               id: 8,
-                              company: 'Perferendis',
-                              position: 'Developer',
+                              company: 'Yellow Duck',
+                              position: 'Sound Designer',
                               description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure veniam similique adipisci! Perferendis odio sapiente libero quam deleniti quidem consequuntur adipisci minima non iusto, sunt optio hic. Corporis, laboriosam perferendis?',
                               created_at: '5/22/2021',
                               logo: 'logo.jpg',
@@ -108,8 +108,8 @@ Vue.config.devtools = true;
 
                         {
                               id: 9,
-                              company: 'Perferendis',
-                              position: 'Developer',
+                              company: 'Supima',
+                              position: 'Graphic Designer',
                               description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure veniam similique adipisci! Perferendis odio sapiente libero quam deleniti quidem consequuntur adipisci minima non iusto, sunt optio hic. Corporis, laboriosam perferendis?',
                               created_at: '5/22/2021',
                               logo: 'logo.jpg',
@@ -121,7 +121,7 @@ Vue.config.devtools = true;
                         {
                               id: 0,
                               company: 'Perferendis',
-                              position: 'Developer',
+                              position: 'Senior Developer',
                               description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure veniam similique adipisci! Perferendis odio sapiente libero quam deleniti quidem consequuntur adipisci minima non iusto, sunt optio hic. Corporis, laboriosam perferendis?',
                               created_at: '5/22/2021',
                               logo: 'logo.jpg',
@@ -145,11 +145,24 @@ Vue.config.devtools = true;
 
                   //logo dinamico - funzione
                   pathLogo: function (avg) {
-                        return "./img/"+ adv.logo +".jpg";
+                        return "./img/"+ adv.logo ;
                   },
 
+                  //funzione assegnazione star
+                  advInStarred: function(index){
+                        if(this.starred.includes(index + 1)){
+                        return 'fas fa-star'
+                  } else {
+                        return 'far fa-heart'
+                  }
+                   },
 
-                  //funzione per push
+
+                  //funzione per push a starred
+                  addToStarred: function (index){
+                        this.starred.push(index+1)
+                        console.log(this.starred)
+                  }
 
 
 

@@ -120,16 +120,16 @@ Vue.config.devtools = true;
                         console.log(this.starred)
                   },
 
-                  //funzione per push applied - specifica solo id percorso
+                  //funzione per push appllied - specifica solo id percorso
                   //applicare un button - TODO gestione visibilità - badge 
                   //gestione if -> collegare button
                   //se NON incluso PUSH -> 
-                  addToApplied: function (index){
-                        if(!this.applied.includes(this.jobs[index].id){
-                              this.applied.push(this.jobs[index].id);
+                  addToAppllied: function (index){
+                        if(!this.appllied.includes(this.jobs[index].id)){
+                              this.appllied.push(this.jobs[index].id);
                         }
 
-                        console.log(this.applied)
+                        console.log(this.appllied)
                   },
 
                   //funzione badge - 

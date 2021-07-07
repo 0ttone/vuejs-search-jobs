@@ -30,8 +30,14 @@
                         <li>City: {{adv.city}}</li>
                         <li>Contract: {{adv.contract}}</li>
                         <li><img class="logo" :src="adv.logo" alt="logo"></li>
-                        <li class="star"><i @click="addToStarred(index)" :class="advInStarred(index)"></i></li>
-                        
+                        <li class="star">
+                              <i @click="addToStarred(index)" :class="advInStarred(index)"></i>
+                        </li>
+                        <li class="check-application">
+                              <button @click="addToAppllied(index)">Candidati</button>
+                              <div><i class="far fa-check-circle"></i> Appllied</div>
+                        </li>
+
 
                   </ul>
             </div>

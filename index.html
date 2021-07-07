@@ -34,8 +34,8 @@
                               <i @click="addToStarred(index)" :class="advInStarred(index)"></i>
                         </li>
                         <li class="check-application">
-                              <button @click="addToAppllied(index)">Candidati</button>
-                              <div><i class="far fa-check-circle"></i> Appllied</div>
+                              <button v-if="!appllied.includes(index)" @click="addToAppllied(index)">Candidati</button>
+                              <div v-if="appllied.includes(index)"><i class="far fa-check-circle"></i> Appllied</div>
                         </li>
 
 

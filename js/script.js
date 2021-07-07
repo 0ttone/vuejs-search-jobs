@@ -109,20 +109,33 @@ Vue.config.devtools = true;
                 
             methods : {
 
-                  //logo dinamico - funzione
+                  //logo dinamico - funzione (!!!TODO la cartella è vuota)
                   pathLogo: function (avg) {
                         return "./img/"+ adv.logo ;
                   },
 
-                  //funzione per push a starred
+                  //funzione per push a starred specifica solo id percorso
                   addToStarred: function (index){
-                        this.starred.push(index + 1)
+                        this.starred.push(this.jobs[index].id)
                         console.log(this.starred)
                   },
 
+                  //funzione per push applied - specifica solo id percorso
+                  //applicare un button - TODO gestione visibilità - badge 
+                  //gestione if -> collegare button
+                  //se NON incluso PUSH -> 
+                  addToApplied: function (index){
+                        if(!this.applied.includes(this.jobs[index].id){
+                              this.applied.push(this.jobs[index].id);
+                        }
+
+                        console.log(this.applied)
+                  },
+
+                  //funzione badge - 
 
 
-                  //funzione assegnazione star
+                  //funzione assegnazione star ?sfuttare la classe, come?
                   advInStarred: function (index){
                         if (this.starred.includes(index + 1)){
                         return "fas fa-star";
